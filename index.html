@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA FIT - Gestão Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF9F6', 'cream-dark': '#F0EFE9', 'moss': '#2D4A3E', 'sage': '#4A7C59', 'terracotta': '#D97757',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'], },
+                    boxShadow: { 'soft': '0 4px 20px -4px rgba(45, 74, 62, 0.08)', 'glow': '0 0 15px rgba(74, 124, 89, 0.15)', }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-stone-200 min-h-screen flex justify-center items-start pt-4 pb-4 font-sans text-gray-800">
+    <div class="w-full max-w-md bg-cream min-h-[850px] relative shadow-2xl rounded-[32px] overflow-hidden border-4 border-white">
+        <div class="px-6 pt-8 pb-4">
+            <div class="flex justify-between items-start mb-1">
+                <div>
+                    <p class="text-sm text-gray-500 font-medium mb-1">Terça, 24 de Outubro</p>
+                    <h1 class="font-serif text-3xl text-moss font-bold">Bom dia, Iana 💚</h1>
+                </div>
+                <div class="relative">
+                    <div class="w-10 h-10 rounded-full bg-cream-dark flex items-center justify-center border border-stone-200">
+                        <i data-lucide="user" class="w-5 h-5 text-moss"></i>
+                    </div>
+                    <div class="absolute top-0 right-0 w-3 h-3 bg-terracotta rounded-full border-2 border-cream"></div>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 flex items-center gap-1 mt-2">
+                <i data-lucide="map-pin" class="w-3 h-3"></i> Torres / Passo de Torres, RS
+            </p>
+        </div>
+        <div class="px-6 grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-white p-4 rounded-2xl shadow-soft border border-stone-100 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                <div class="absolute top-0 right-0 w-16 h-16 bg-sage/10 rounded-bl-full -mr-4 -mt-4"></div>
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="p-1.5 bg-sage/10 rounded-lg"><i data-lucide="chef-hat" class="w-4 h-4 text-sage"></i></div>
+                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Produção</span>
+                </div>
+                <div class="flex items-end gap-2">
+                    <span class="text-3xl font-bold text-moss">45</span>
+                    <span class="text-xs text-gray-500 mb-1.5">marmitas</span>
+                </div>
+                <div class="mt-3 w-full bg-stone-100 rounded-full h-1.5"><div class="bg-sage h-1.5 rounded-full" style="width: 65%"></div></div>
+                <p class="text-[10px] text-gray-400 mt-1.5">65% concluído</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl shadow-soft border border-stone-100 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                <div class="absolute top-0 right-0 w-16 h-16 bg-terracotta/10 rounded-bl-full -mr-4 -mt-4"></div>
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="p-1.5 bg-terracotta/10 rounded-lg"><i data-lucide="bike" class="w-4 h-4 text-terracotta"></i></div>
+                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Rotas</span>
+                </div>
+                <div class="flex items-end gap-2">
+                    <span class="text-3xl font-bold text-terracotta">12</span>
+                    <span class="text-xs text-gray-500 mb-1.5">pendentes</span>
+                </div>
+                <div class="mt-3 flex items-center gap-1.5">
+                    <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                    <p class="text-[10px] text-gray-500">3 entregadores ativos</p>
+                </div>
+            </div>
+        </div>
+        <div class="px-6 mb-6">
+            <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                <button class="flex-shrink-0 bg-white border border-stone-200 rounded-xl px-4 py-3 flex flex-col items-center gap-2 min-w-[80px] hover:border-sage/50 transition-colors"><i data-lucide="utensils" class="w-5 h-5 text-sage"></i><span class="text-[11px] font-medium text-gray-600">Cardápio</span></button>
+                <button class="flex-shrink-0 bg-white border border-stone-200 rounded-xl px-4 py-3 flex flex-col items-center gap-2 min-w-[80px] hover:border-sage/50 transition-colors"><i data-lucide="clipboard-list" class="w-5 h-5 text-sage"></i><span class="text-[11px] font-medium text-gray-600">Cozinha</span></button>
+                <button class="flex-shrink-0 bg-white border border-stone-200 rounded-xl px-4 py-3 flex flex-col items-center gap-2 min-w-[80px] hover:border-sage/50 transition-colors"><i data-lucide="users" class="w-5 h-5 text-sage"></i><span class="text-[11px] font-medium text-gray-600">Clientes</span></button>
+                <button class="flex-shrink-0 bg-white border border-stone-200 rounded-xl px-4 py-3 flex flex-col items-center gap-2 min-w-[80px] hover:border-sage/50 transition-colors"><i data-lucide="wallet" class="w-5 h-5 text-sage"></i><span class="text-[11px] font-medium text-gray-600">Financeiro</span></button>
+            </div>
+        </div>
+        <div class="px-6 pb-24">
+            <div class="flex justify-between items-end mb-4">
+                <h2 class="font-serif text-xl text-moss font-bold">Cardápio da Semana</h2>
+                <button class="text-xs text-sage font-semibold flex items-center gap-1 hover:underline">Ver como cliente <i data-lucide="external-link" class="w-3 h-3"></i></button>
+            </div>
+            <div class="flex gap-2 overflow-x-auto no-scrollbar mb-5">
+                <button class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-gray-500 bg-white border border-stone-200">Seg</button>
+                <button class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-white bg-sage shadow-glow">Ter</button>
+                <button class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-gray-500 bg-white border border-stone-200">Qua</button>
+                <button class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-gray-500 bg-white border border-stone-200">Qui</button>
+                <button class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium text-gray-500 bg-white border border-stone-200">Sex</button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-2xl shadow-soft border border-stone-100 overflow-hidden group hover:shadow-md transition-all duration-300">
+                    <div class="relative h-32 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594971475770-989567834344?q=80&w=400&auto=format&fit=crop" alt="Strogonoff" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-2 left-2 flex flex-col gap-1"><span class="bg-orange-100/90 backdrop-blur-sm text-orange-800 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">Low Cal</span></div>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-moss text-sm leading-tight mb-1">Strogonoff Light</h3>
+                        <p class="text-[10px] text-gray-500 line-clamp-2 mb-2">Frango desfiado, molho de iogurte e arroz integral.</p>
+                        <div class="flex justify-between items-center"><span class="text-xs font-semibold text-sage">Incluso no Plano</span><button class="w-6 h-6 rounded-full bg-cream-dark flex items-center justify-center text-moss hover:bg-sage hover:text-white transition-colors"><i data-lucide="plus" class="w-4 h-4"></i></button></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-soft border border-stone-100 overflow-hidden group hover:shadow-md transition-all duration-300">
+                    <div class="relative h-32 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=400&auto=format&fit=crop" alt="Panquecas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-2 left-2 flex flex-col gap-1"><span class="bg-green-100/90 backdrop-blur-sm text-green-800 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">Fit</span><span class="bg-yellow-100/90 backdrop-blur-sm text-yellow-800 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">Proteico</span></div>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-moss text-sm leading-tight mb-1">Panquecas Fit</h3>
+                        <p class="text-[10px] text-gray-500 line-clamp-2 mb-2">Banana, aveia e whey. Perfeita para o pré-treino.</p>
+                        <div class="flex justify-between items-center"><span class="text-xs font-semibold text-sage">Incluso no Plano</span><button class="w-6 h-6 rounded-full bg-cream-dark flex items-center justify-center text-moss hover:bg-sage hover:text-white transition-colors"><i data-lucide="plus" class="w-4 h-4"></i></button></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-soft border border-stone-100 overflow-hidden group hover:shadow-md transition-all duration-300">
+                    <div class="relative h-32 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=400&auto=format&fit=crop" alt="Pastel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-2 left-2 flex flex-col gap-1"><span class="bg-blue-100/90 backdrop-blur-sm text-blue-800 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">Prático</span></div>
+                    </div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-moss text-sm leading-tight mb-1">Pastel de Frango</h3>
+                        <p class="text-[10px] text-gray-500 line-clamp-2 mb-2">Massa de batata doce, recheio cremoso de frango.</p>
+                        <div class="flex justify-between items-center"><span class="text-xs font-semibold text-sage">Incluso no Plano</span><button class="w-6 h-6 rounded-full bg-cream-dark flex items-center justify-center text-moss hover:bg-sage hover:text-white transition-colors"><i data-lucide="plus" class="w-4 h-4"></i></button></div>
+                    </div>
+                </div>
+                 <div class="border-2 border-dashed border-stone-300 rounded-2xl flex flex-col items-center justify-center gap-2 text-stone-400 hover:border-sage hover:text-sage transition-colors cursor-pointer min-h-[180px]">
+                    <i data-lucide="plus-circle" class="w-8 h-8"></i>
+                    <span class="text-xs font-medium">Adicionar Prato</span>
+                </div>
+            </div>
+        </div>
+        <button class="absolute bottom-24 right-6 w-14 h-14 bg-moss text-white rounded-full shadow-lg flex items-center justify-center hover:bg-sage hover:scale-110 transition-all duration-300 z-20">
+            <i data-lucide="plus" class="w-7 h-7"></i>
+        </button>
+        <div class="absolute bottom-0 left-0 right-0 glass border-t border-stone-200/50 px-6 py-4 flex justify-between items-center z-30">
+            <button class="flex flex-col items-center gap-1 text-sage"><i data-lucide="layout-dashboard" class="w-6 h-6"></i><span class="text-[10px] font-semibold">Início</span><div class="w-1 h-1 rounded-full bg-sage"></div></button>
+            <button class="flex flex-col items-center gap-1 text-gray-400 hover:text-moss transition-colors"><i data-lucide="calendar" class="w-6 h-6"></i><span class="text-[10px] font-medium">Cardápio</span></button>
+            <button class="flex flex-col items-center gap-1 text-gray-400 hover:text-moss transition-colors"><i data-lucide="flame" class="w-6 h-6"></i><span class="text-[10px] font-medium">Cozinha</span></button>
+            <button class="flex flex-col items-center gap-1 text-gray-400 hover:text-moss transition-colors"><i data-lucide="heart-handshake" class="w-6 h-6"></i><span class="text-[10px] font-medium">Clientes</span></button>
+        </div>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
